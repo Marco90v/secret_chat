@@ -1,0 +1,78 @@
+.overlay{
+    background-color: #00000080;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.modal{
+    z-index: 1;
+    background-color: black;
+    box-shadow: 0 0 10px 1px #979797;
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.modal.entra {
+    opacity: 1;
+}
+.modal > label{
+    font-size: 1.56em;
+    margin: 0.5rem;
+}
+.modal > input[type="text"]{
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    outline: none;
+    border: 2px transparent solid;
+    border-radius: 5px;
+}
+.modal > input[type="text"]:focus{
+    border: 2px #006f70 solid;
+}
+.modal > .buttons > button{
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    /* background-color: #2e2ecf; */
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+}
+.modal > .buttons > button.modalCancel{
+    background-color: #bf0010;
+}
+.modal > .buttons > button.modalCreate{
+    background-color: #2e2ecf;
+}
+.modal > span{
+    /* background-color: green; */
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    color: black;
+    font-weight: bold;
+}
+.modal > span.error{
+    background-color: #bf0010;
+}
+.modal > span.success{
+    background-color: green;
+}

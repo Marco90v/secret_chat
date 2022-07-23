@@ -1,13 +1,231 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #120012;
+  color: white;
+  height: 100vh;
+}
+main.login{
+  display: grid;
+  grid-template-rows: 5rem auto;
+  height: 100vh;
+}
+main.login > h1{
+  text-align: center;
+  font-size: 2.5rem;
+}
+main.login > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main.login > section > button{
+  padding: 0.5rem 1rem;
+  background-color: #2d2dff;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
+}
+main.login > section > button:hover{
+  background-color: #ffa000;
+}
+main.dashboard {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% auto;
+}
+main.dashboard > aside{
+  display: grid;
+  grid-template-rows: 5.5rem 2.5rem auto 3.5rem;
+  background-color: #110e17;
+  height: 100vh;
+}
+main.dashboard > aside > h1{
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+main.dashboard > aside > h1 > span{
+  display: block;
+}
+main.dashboard > aside > div {
+  overflow: hidden;
+}
+main.dashboard > aside > div > ul{
+  margin: 1rem 0;
+  list-style: none;
+  height: 100%;
+  overflow-y: auto;
+}
+main.dashboard > aside > div > ul > li{
+  cursor: pointer;
+}
+main.dashboard > aside > div > ul > li.active{
+  background-color: #1b1624;
+}
+main.dashboard > aside > div > ul > li:hover{
+  background-color: #1b1624;
+}
+main.dashboard > aside > div > ul > li > h2{
+  text-transform: capitalize;  
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem 0 2rem;
+}
+main.dashboard > aside > div > ul > li.active > h2{
+  color: orange;
+}
+main.dashboard > aside > div > ul > li > span{
+  display: block;
+  text-align: end;
+  padding: 0 2rem;
+  color: gray;
+  border-bottom: 1px solid #09001a;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+main.dashboard > aside > button,
+main.dashboard > section > aside > button{
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease-in-out;
+}
+main.dashboard > aside > button:hover,
+main.dashboard > section > aside > button:hover,
+.inputMessage > button:hover,
+main.dashboard > section > aside > ul > li > button:hover{
+  box-shadow: 0 0 10px 1px rgb(255 255 255 / 20%);
+}
+main.dashboard > aside > .newConversation{
+  background-color: #00910b;
+}
+main.dashboard > aside > .loggout{
+  background-color: #c30000;
+  margin-bottom: 1rem;
+}
+main.dashboard > section{
+  background-color: #09001a;
+  display: grid;
+  grid-template-columns: auto 20%;
+}
+.messages{
+  display: grid;
+  grid-template-rows: auto 4rem;
+  position: relative;
+}
+.messages > div {
+  background-color: #120012;
+  position: relative;
+}
+.messages > div:nth-child(2){
+  overflow: hidden;
+}
+.messages > div:nth-child(2) > ul{
+  overflow-y: auto;
+  max-height: 100%;
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.messages > .notify{
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #110e17;
+  transition: top 0.25s ease-in-out;
+}
+.messages > .notify > p{
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+/* .messages > div > ul {
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+} */
+.messages > div > ul > li{
+  border-top: 1px solid #110e17;
+  padding: 0.5rem 1rem;
+}
+.messages > div > ul > li > span{
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+.messages > div > ul > li > p{
+  font-size: 1.5rem;
+}
+.inputMessage{
+  border-top: 2px solid #110e17;
+  display: grid;
+  grid-template-columns: auto 5rem;
+  padding: 1rem;
+}
+.inputMessage > input{
+  border-radius: 5px 0 0 5px;
+  padding: 0 0.5rem;
+}
+.inputMessage > button {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  transition: box-shadow 0.25s ease-in-out;
+  cursor: pointer;
+}
+main.dashboard > section > aside{
+  display: grid;
+  grid-template-rows: 4rem auto 4rem;
+  background-color: #110e17;
+}
+main.dashboard > section > aside > button{
+  /* background-color: #00910b; */
+  margin: 1rem auto;
+}
+main.dashboard > section > aside > ul > li{
+  display: grid;
+  grid-template-columns: 5rem auto 2rem;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid #120012;
+  padding: 0.5rem;
+}
+main.dashboard > section > aside > ul > li > img{
+  margin: 0 auto;
+}
+main.dashboard > section > aside > ul > li > button{
+  background-color: red;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.userAvatar{
+  width: 50px;
+  border-radius: 100px;
+}
+main.dashboard > section > aside > button.deleteConv{
+  background-color: red;
+}
+main.dashboard > section > aside > button.addParti{
+  background-color: #00910b;
 }
