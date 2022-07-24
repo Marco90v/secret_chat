@@ -1,15 +1,19 @@
 {
+  "homepage":"https://github.com/Marco90v/secret_chat/",
   "name": "secret_chat",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.35.4",
     "@twilio/conversations": "^2.0.1",
+    "gh-pages": "^4.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "twilio": "^3.78.0"
