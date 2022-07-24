@@ -3,7 +3,7 @@ import { userContext } from "../context/context";
 import ItemConv from "./ItemConv";
 
 const AsideDashboard = ({supabase, setType, setModal}) => {
-    const { state, dispatch } = useContext(userContext);
+    const { state } = useContext(userContext);
     const newConversation = (t) => {
         setType(t);
         setModal(true);

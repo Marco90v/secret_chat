@@ -1,9 +1,8 @@
 import { Client } from '@twilio/conversations';
-import { createRef, useRef, useState } from 'react';
+import { useState } from 'react';
 import { useContext, useEffect } from 'react';
 import { getToken } from '../api/get-access-token';
 import AsideDashboard from '../components/AsideDashboard';
-import ItemConv from '../components/ItemConv';
 import Message from '../components/Message';
 import Modal from '../components/Modal/Modal';
 import { userContext } from '../context/context';
@@ -49,7 +48,6 @@ const Dashboard = ({supabase}) => {
             setTimeout(() => setNotify(""), 5000);
         });
         state.client?.on("messageAdded", (mensaje) => {
-            // console.log(mensaje.conversation.sid === state.activeConv);
             if(mensaje.conversation.sid === state.activeConv){
                 setNewMsg(mensaje);
             }

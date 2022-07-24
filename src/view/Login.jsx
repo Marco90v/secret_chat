@@ -1,8 +1,4 @@
-import { useContext } from "react";
-import { userContext } from "../context/context";
-
 const Login = ({supabase}) => {
-    const { state, dispatch } = useContext(userContext);
 
     const signInWithGithub = async() => {
         const { user, session, error } = await supabase.auth.signIn({

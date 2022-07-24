@@ -5,7 +5,7 @@ const Modal = ({setModal, type}) => {
 
     const [ animate, setAnimate ] = useState(false);
     const name = useRef();
-    const { state, dispatch } = useContext(userContext);
+    const { state } = useContext(userContext);
 
 
     const close = () => {

@@ -1,8 +1,0 @@
-POST https://jade-porcupine-5821.twil.io/token-service HTTP/1.1
-content-type: application/json
-Accept: text/html
-
-{ 
-    "identity": "user00",
-    "password": "Marco"
-}

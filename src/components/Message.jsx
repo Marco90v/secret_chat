@@ -1,10 +1,9 @@
-import { forwardRef, useImperativeHandle } from "react";
-import { useContext, useEffect, useRef, useState, useTransition } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { userContext } from "../context/context";
 import AsideMessages from "./AsideMessages";
 
 const Message = ( {notify, setModal, setType, newData, setNewData, newMsg, setNewMsg} ) => {
-    const { state, dispatch } = useContext(userContext);
+    const { state } = useContext(userContext);
     const [messages, setMessages] = useState([]);
     const convActive = state.activeConv;
     const message = useRef();
@@ -19,6 +18,7 @@ const Message = ( {notify, setModal, setType, newData, setNewData, newMsg, setNe
     const send = async () => {
         const text = message.current.value
         const rest = await state.conversations[convActive].sendMessage(text);
+        message.current.value = "";
     }
 
     useEffect(() => {

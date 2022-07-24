@@ -4,7 +4,7 @@ import trash from "../assets/trash.png";
 
 const AsideMessages = ({setType, setModal, newData, setNewData,}) => {
 
-    const { state, dispatch } = useContext(userContext);
+    const { state } = useContext(userContext);
     const convActive = state.activeConv;
     const [participants, setParticipants] = useState([]);
 
