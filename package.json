@@ -1,13 +1,13 @@
 {
-  "homepage":"https://github.com/Marco90v/secret_chat/",
+  "homepage":"https://github.com/Marco90v/secret_chat",
   "name": "secret_chat",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=./",
     "preview": "vite preview",
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

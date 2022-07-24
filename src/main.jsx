@@ -5,9 +5,9 @@ import { Context } from './context/context'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <React.StrictMode>
   <Context>
     <App />
   </Context>
-  // </React.StrictMode>
+  </React.StrictMode>
 )
